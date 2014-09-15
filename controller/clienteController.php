@@ -6,8 +6,6 @@ function __autoload($classe) {
 $cli = new Cliente ( $_REQUEST );
 $dao = new ClienteDAO ( $cli );
 
-
-
 if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 	// Inserir "Salvar"
 	$dao->salvar ();
@@ -15,6 +13,5 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 	// Inserir "Excluir"
 	$dao->excluir ();
 }
-
 
 header ( 'Location:../view/cliente.php?op=L' );
