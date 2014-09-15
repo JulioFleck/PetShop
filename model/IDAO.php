@@ -4,4 +4,5 @@ interface IDAO {
 	function atualizar();
 	function listar();
 	function excluir();
+	function buscar();
 }

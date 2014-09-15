@@ -2,7 +2,12 @@
 class Object {
 	public function __set($name, $value) {
 		if (property_exists ( $this, $name )) {
-			$this->$name = $value;
+			
+			if (strstr ( $name, 'data' )) {
+				$this->$name = Helper::coverteData ( $value );
+			} else {
+				$this->$name = $value;
+			}
 		}
 		return $this;
 	}

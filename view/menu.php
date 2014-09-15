@@ -3,32 +3,32 @@
     <h2> Menu </h2>
     <ul class="nav nav-tabs nav-stacked">
         <li>
-            <a href="#">
+            <a href="atendimento.php">
                 <i class="icon-star"></i>
                 Atendimento
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="cliente.php">
                 <i class="icon-star"></i>
                 Cliente
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="animal.php">
                 <i class="icon-star"></i>
                 Pet
             </a>
         </li>
        
         <li>
-            <a href="#">
+            <a href="usuario.php">
                 <i class="icon-star"></i>
                 Usuários
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="../controller/loginController.php?logoff=S">
                 <i class="icon-star"></i>
                 Logoff
             </a>

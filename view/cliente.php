@@ -15,8 +15,14 @@
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
 			<div class="span10">
 				<div class="well">
+				
  						<?php
-							if (isset($_GET ['op']) and $_GET ['op'] == 'I') {
+							if (isset ( $_SESSION ['msg'] )) {
+								echo "<div class=\"alert alert-danger\" role=\"alert\">{$_SESSION['msg']}</div>";
+								unset ( $_SESSION ['msg'] );
+							}
+							
+							if (isset ( $_GET ['op'] ) and ($_GET ['op'] == 'F' or $_GET ['op'] == 'I')) {
 								include 'formCliente.php';
 							} else {
 								include 'listaCliente.php';

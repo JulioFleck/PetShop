@@ -17,15 +17,16 @@
 $dao = new ClienteDAO ( new Cliente () );
 $tabela = $dao->listar ();
 foreach ( $tabela as $row ) {
+$cli = new Cliente($row);
 	?>
 <tr>
-			<td><?php echo $row['id']?></td>
-			<td><?php echo $row['nome']?></td>
-			<td><?php echo $row['telefone']?></td>
-			<td><?php echo $row['dataNasc']?></td>
-			<td><a href="../controller/clienteController.php?op=U&id=<?php echo $row['id']?>"><i
+			<td><?php echo $cli->__get('id')?></td>
+			<td><a href="../controller/clienteController.php?op=U&id=<?php echo $cli->__get('id')?>"><?php echo $cli->__get('nome')?></a></td>
+			<td><?php echo $cli->__get('telefone')?></td>
+			<td><?php echo $cli->__get('dataNasc')?></td>
+			<td><a href="../controller/clienteController.php?op=U&id=<?php echo $cli->__get('id')?>"><i
 					class="icon-edit"></i></a></td>
-			<td><a href="../controller/clienteController.php?op=D&id=<?php echo $row['id']?>"><i
+			<td><a href="../controller/clienteController.php?op=D&id=<?php echo $cli->__get('id')?>"><i
 					class="icon-trash"></i></a></td>
 		</tr>
 

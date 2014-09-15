@@ -10,9 +10,20 @@ if ($_GET ['op'] == 'I') {
 	$endereco = '';
 	$op = 'I';
 } else {
+		
+	$cli = new Cliente($_SESSION ['obj']);
+	$id = $cli->__get('id');
+	$nome = $cli->__get('nome');
+	$cpf = $cli->__get('cpf');
+	$sexo = $cli->__get('sexo');
+	$dataNasc = $cli->__get('dataNasc');
+	$telefone = $cli->__get('telefone');
+	$endereco = $cli->__get('endereco');
+	$op = 'U';
 }
 ?>
-<form class="form-horizontal" action="../controller/clienteController.php" method="post">
+<form class="form-horizontal"
+	action="../controller/clienteController.php" method="post">
 	<fieldset>
 		<div id="legend" class="">
 			<legend class="">Cadastro do Cliente</legend>
